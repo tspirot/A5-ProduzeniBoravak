@@ -25,7 +25,6 @@ namespace _4EIT_A5
             PopuniLV();
             PopuniComboBox();
             cbDan.SelectedIndex = -1;
-           
         }
         private void PopuniLV()
         {
@@ -51,7 +50,6 @@ namespace _4EIT_A5
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-               
             }
         }
         private void PopuniComboBox()
@@ -71,7 +69,6 @@ namespace _4EIT_A5
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-
             }
         }
         private void ObrisiKontole()
@@ -85,10 +82,8 @@ namespace _4EIT_A5
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (listView1.SelectedItems.Count==0)
-            {
+            if (listView1.SelectedItems.Count == 0)
                 return;
-            }
             tbSifra.Text = listView1.SelectedItems[0].SubItems[0].Text;
             tbNaziv.Text = listView1.SelectedItems[0].SubItems[1].Text;
             cbDan.Text = listView1.SelectedItems[0].SubItems[2].Text;
@@ -96,7 +91,7 @@ namespace _4EIT_A5
             tbZavrsetak.Text= listView1.SelectedItems[0].SubItems[4].Text;
         }
 
-        private void toolStripButton1_Click(object sender, EventArgs e)
+        private void toolStripButtonStatistika_Click(object sender, EventArgs e)
         {
             Statistika prikaz = new Statistika();
             prikaz.Show();
@@ -153,7 +148,7 @@ namespace _4EIT_A5
             }
         }
 
-        private void toolStripLabel1_Click(object sender, EventArgs e)
+        private void toolStripLabelOAplikaciji_Click(object sender, EventArgs e)
         {
             Uputsvo prikaz = new Uputsvo();
             prikaz.Show();

@@ -21,15 +21,16 @@ namespace _4EIT_A5
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonPrikazi_Click(object sender, EventArgs e)
         {
             SqlCommand komanda = new SqlCommand();
             komanda.Connection = konekcija;
-            komanda.CommandText = @"SELECT a.Dan as Dan, (COUNT(r.DeteID) - 
-COUNT (CASE WHEN r.Prisustvo = 0 THEN 1 ELSE NULL END)) AS 'Broj dece'
-FROM Aktivnost AS a, Registar_Aktivnosti AS r
-WHERE a.AktivnostID = r.AktivnostID
-GROUP BY a.Dan";
+            komanda.CommandText = 
+                @"SELECT a.Dan as Dan, (COUNT(r.DeteID) - 
+                COUNT (CASE WHEN r.Prisustvo = 0 THEN 1 ELSE NULL END)) AS 'Broj dece'
+                FROM Aktivnost AS a, Registar_Aktivnosti AS r
+                WHERE a.AktivnostID = r.AktivnostID
+                GROUP BY a.Dan";
             SqlDataAdapter adapter = new SqlDataAdapter(komanda);
             DataTable dt = new DataTable();
             try
@@ -41,14 +42,18 @@ GROUP BY a.Dan";
                 chart1.Series[0].YValueMembers = "Broj dece";
                 chart1.Series[0].IsValueShownAsLabel = true;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                MessageBox.Show("Doslo je do greske");
+                MessageBox.Show("Doslo je do greske! "+ ex.Message);
+            }
+            finally
+            {
+                adapter.Dispose();
+                dt.Dispose();
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void buttonIzadji_Click(object sender, EventArgs e)
         {
             this.Close();
         }

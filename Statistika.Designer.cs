@@ -28,67 +28,73 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            this.buttonIzadji = new System.Windows.Forms.Button();
+            this.buttonPrikazi = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button2
+            // buttonIzadji
             // 
-            this.button2.Location = new System.Drawing.Point(202, 365);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(110, 36);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Izadji";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.buttonIzadji.Location = new System.Drawing.Point(269, 449);
+            this.buttonIzadji.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonIzadji.Name = "buttonIzadji";
+            this.buttonIzadji.Size = new System.Drawing.Size(147, 44);
+            this.buttonIzadji.TabIndex = 10;
+            this.buttonIzadji.Text = "Izadji";
+            this.buttonIzadji.UseVisualStyleBackColor = true;
+            this.buttonIzadji.Click += new System.EventHandler(this.buttonIzadji_Click);
             // 
-            // button1
+            // buttonPrikazi
             // 
-            this.button1.Location = new System.Drawing.Point(31, 365);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(110, 36);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Prikazi";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonPrikazi.Location = new System.Drawing.Point(41, 449);
+            this.buttonPrikazi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonPrikazi.Name = "buttonPrikazi";
+            this.buttonPrikazi.Size = new System.Drawing.Size(147, 44);
+            this.buttonPrikazi.TabIndex = 9;
+            this.buttonPrikazi.Text = "Prikazi";
+            this.buttonPrikazi.UseVisualStyleBackColor = true;
+            this.buttonPrikazi.Click += new System.EventHandler(this.buttonPrikazi_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(21, 37);
+            this.dataGridView1.Location = new System.Drawing.Point(28, 46);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(308, 302);
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(411, 372);
             this.dataGridView1.TabIndex = 11;
             // 
             // chart1
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea3);
-            this.chart1.Location = new System.Drawing.Point(385, 37);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            this.chart1.Location = new System.Drawing.Point(513, 46);
+            this.chart1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chart1.Name = "chart1";
-            series3.ChartArea = "ChartArea1";
-            series3.CustomProperties = "DrawingStyle=Cylinder";
-            series3.Name = "Series1";
-            this.chart1.Series.Add(series3);
-            this.chart1.Size = new System.Drawing.Size(392, 375);
+            series1.ChartArea = "ChartArea1";
+            series1.CustomProperties = "DrawingStyle=Cylinder";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(523, 462);
             this.chart1.TabIndex = 12;
             this.chart1.Text = "chart1";
             // 
             // Statistika
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonIzadji);
+            this.Controls.Add(this.buttonPrikazi);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Statistika";
             this.Text = "Statistika";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -99,8 +105,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonIzadji;
+        private System.Windows.Forms.Button buttonPrikazi;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }

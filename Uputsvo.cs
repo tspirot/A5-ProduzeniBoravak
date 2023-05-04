@@ -19,7 +19,7 @@ namespace _4EIT_A5
 
         private void Uputsvo_Load(object sender, EventArgs e)
         {
-            richTextBox1.LoadFile(@"C:\Users\Kabinet 49-3\Desktop\Gabrijel Askovic\4EIT-A5\UPUTSVO.rtf");
+            richTextBox1.LoadFile(@"UPUTSVO.rtf");
         }
     }
 }
