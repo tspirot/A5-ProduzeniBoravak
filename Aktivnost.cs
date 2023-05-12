@@ -42,8 +42,8 @@ namespace _4EIT_A5
                     ListViewItem item = new ListViewItem(red[0].ToString());
                     item.SubItems.Add(red[1].ToString());
                     item.SubItems.Add(red[2].ToString());
-                    item.SubItems.Add(DateTime.Parse(red[3].ToString()).ToString ("hh:mm"));
-                    item.SubItems.Add(DateTime.Parse(red[4].ToString()).ToString("hh:mm"));
+                    item.SubItems.Add(DateTime.Parse(red[3].ToString()).ToString ("HH:mm"));
+                    item.SubItems.Add(DateTime.Parse(red[4].ToString()).ToString("HH:mm"));
                     listView1.Items.Add(item);
                 }
             }
@@ -110,12 +110,12 @@ namespace _4EIT_A5
             int sifra = int.Parse(tbSifra.Text);
             if (tbPocetak.Text!="")
             {
-                pocetak= DateTime.ParseExact(tbPocetak.Text, "hh:mm", null);
+                pocetak= DateTime.ParseExact(tbPocetak.Text, "HH:mm", null);
                 
             }
             if (tbZavrsetak.Text != "")
             {
-                zavrsetak = DateTime.ParseExact(tbZavrsetak.Text, "hh:mm", null);
+                zavrsetak = DateTime.ParseExact(tbZavrsetak.Text, "HH:mm", null);
 
             }
             if (cbDan.Text!="")
